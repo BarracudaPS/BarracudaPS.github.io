@@ -176,7 +176,7 @@ exports.commands = {
 
 		addteam: function (target, room, user) {
 			if (!this.can("draft", null, room)) return false;
-			let [teamName, ...manager] = target.split(",").map(p => p.trim());
+			let [teamName, manager] = target.split(",").map(p => p.trim());
 			if (!teamName || !manager) return this.parse("/draft help");
 			if (!drafts[room]) return this.errorReply("This room is not drafting at the moment.");
 			if (!drafts[room].state === "prep") return this.errorReply("You may not add teams to the draft at this moment.");
@@ -273,7 +273,7 @@ exports.commands = {
 		changepicks: "change",
 		change: function (target, room, user) {
 			if (!this.can("draft", null, room)) return false;
-			let [teamname, draftpick, ...pokemon] = target.split(",").map(p => p.trim());
+			let [teamname, draftpick, pokemon] = target.split(",").map(p => p.trim());
 			if (!drafts[room]) return this.errorReply("This room is not drafting at the moment.");
 			pokemon = pokemon.toLowerCase().replace(" ", "");
 			if (!teamname || !draftpick || !pokemon) return this.parse("/draft help");
