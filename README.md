@@ -1,4 +1,4 @@
-WaveLength Server @ Pokémon Showdown
+Barracuda @ Pokémon Showdown
 ========================================================================
 
 Navigation: [Wavelength][1] | [PS Server repository][10] | [PS Client repository][2] | [PS Dex repository][3]
